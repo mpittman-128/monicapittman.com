@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monica Pittman | Full-Stack & NLU Software Engineer</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --tag-bg: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid var(--tag-bg); padding-bottom: 2rem; }
+    h1 { font-size: 2.5rem; color: var(--text); margin-bottom: 0.5rem; }
+    .subtitle { font-size: 1.25rem; color: var(--accent); margin-bottom: 1rem; font-weight: 500; }
+    .bio { color: var(--text-muted); font-size: 1.1rem; max-width: 750px; margin-bottom: 1.5rem; }
+    .links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      background-color: var(--accent);
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .btn:hover { background-color: var(--accent-hover); }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text);
+      border: 1px solid var(--tag-bg);
+    }
+    .btn-outline:hover { background-color: var(--tag-bg); }
+    
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--text); border-left: 4px solid var(--accent); padding-left: 0.75rem; }
+    
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--tag-bg);
+    }
+    .project-title { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--accent); }
+    .project-desc { color: var(--text-muted); margin-bottom: 1rem; font-size: 1rem; }
+    .project-bullets { margin-left: 1.2rem; margin-bottom: 1rem; color: var(--text-muted); }
+    .project-bullets li { margin-bottom: 0.4rem; }
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .tag { background: var(--tag-bg); color: var(--text); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-family: monospace; }
+    
+    footer { text-align: center; color: var(--text-muted); margin-top: 4rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Monica Pittman</h1>
+      <div class="subtitle">Full-Stack & NLU Software Engineer</div>
+      <p class="bio">
+        5+ years of experience building, training, and deploying AI/NLU-powered applications and scalable automation pipelines. Skilled in Python, SQL, React, and REST APIs with a background in operational business leadership.
+      </p>
+      <div class="links">
+        <a href="https://github.com/mpittman-128" target="_blank" class="btn">GitHub Portfolio</a>
+        <a href="https://linkedin.com/in/monica-pittman-55914b183" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="mailto:monica.pittman43@icloud.com" class="btn btn-outline">Contact Me</a>
+      </div>
+    </header>
 
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <div class="project-title">Banking Intent Classifier</div>
+        <p class="project-desc">Fine-tuned DistilBERT model for multi-class NLP customer intent classification.</p>
+        <ul class="project-bullets">
+          <li>Achieved 90.7% test accuracy classifying customer queries across 77 banking intent categories using PyTorch and Hugging Face.</li>
+          <li>Built end-to-end pipeline: data preprocessing, tokenization, training loop, evaluation, and confusion matrix error analysis.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Hugging Face</span>
+          <span class="tag">NLP / NLU</span>
+        </div>
+        <a href="https://github.com/mpittman-128/banking-intent-classifier" target="_blank" class="btn btn-outline">View Code on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">Visions Storage – Web Storage System</div>
+        <p class="project-desc">Web application for real-time vehicle storage tracking and database management.</p>
+        <ul class="project-bullets">
+          <li>Architected a custom web app using React and the Google Sheets API to eliminate paper logging and manage vehicle inventory in real-time.</li>
+          <li>Built dynamic API integrations to handle stream check-in/check-out events and server-side state updates.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">Mobile Inventory Management System</div>
+        <p class="project-desc">Full-stack field-to-office vehicle tracking dashboard with mobile camera QR parsing.</p>
+        <ul class="project-bullets">
+          <li>Integrated native mobile camera capabilities with third-party JS libraries to parse QR codes directly into a live cloud database.</li>
+          <li>Built server-side routing (CRUD operations) for real-time status updates and end-of-month accounting data migration.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Apps Script</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">CRUD</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Monica Pittman • Built with HTML/CSS & hosted on GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
